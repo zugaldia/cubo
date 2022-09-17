@@ -13,19 +13,19 @@ Because every project is different, Cubo provides a variety of building blocks t
 [OpenSCAD](https://openscad.org/) source code is available, customizations and contributions to the project are welcome.
 
 ## Main features
-- Supports Arduino (Leonardo, Nano, Uno R3) and Raspberry Pi (3, 4, Pico, Zero) out-of-the-box.
-- Extendable to custom boards, with support for NVIDIA Jetson Nano and Google Coral Dev Board being next on the list.
-- All sides have the same dimensions and holes positions to make them interchangeable. You can choose the sides that work best for your project, replace them as the project evolves, or swap them between projects.
-- Sides are connected with screws for durability. You can choose between two versions: one with heat inserts, and one with good old screw nuts.
-- Sides are 19x19cm which are big enough to host most dev boards comfortably and small enough to fit most 3D printers.
-- Easy to print with default settings and no supports. STLs are provided here and on Printables. There are also ready-to-print sliced versions that work with Prusa i3 MK3S+ with PETG filament.
+- Supports **Arduino** (Leonardo, Nano, Uno R3) and **Raspberry Pi** (3, 4, Pico, Zero) out-of-the-box.
+- Extendable to **custom boards**, with support for NVIDIA Jetson Nano and Google Coral Dev Board being next on the list.
+- All sides have the same dimensions and holes positions to make them **interchangeable**. You can choose the sides that work best for your project, replace them as the project evolves, or swap them between projects.
+- Sides are connected with screws for **durability**. You can choose between two versions: one with heat inserts, and one with good old screw nuts.
+- Sides are 19x19cm which are big enough to host most dev boards **with room to spare**, including wiring, and small enough to fit most 3D printers.
+- **Easy to print** with default settings and no supports. STLs are provided here and on Printables. There are also ready-to-print sliced versions that work with Prusa i3 MK3S+ with PETG filament.
 
 ## Getting started
 
 To build one Cubo, you need the following:
 1. **3D print:** 1 bottom side, 1 top side, and 4 sides (see below for options).
-1. **Cubo screws:** 16xM3x8 flat head screws and, either 16xM3 nuts or 16x[M3 heat inserts](https://www.cnckitchen.com/shop#!/Gewindeeinsatz-threaded-insert-M3-Standard-100-Stk-pcs/p/431146823/category=0).
-1. **PCB screws:** Typically 4xM2.5 screws to attach the PCB and 4x[M2.5 heat inserts](https://www.cnckitchen.com/shop#!/Gewindeeinsatz-threaded-insert-M2-5-Standard-100-Stk-pcs/p/431146818/category=0). Alternatively, you can bring your own enclosure and glue/attach it to an empty bottom side.
+1. **Cubo screws:** 16 M3x8 flat head screws and, either 16 M3 nuts or 16 [M3 heat inserts](https://www.cnckitchen.com/shop#!/Gewindeeinsatz-threaded-insert-M3-Standard-100-Stk-pcs/p/431146823/category=0).
+1. **PCB screws:** Typically 4 M2.5 screws to attach the PCB and 4 [M2.5 heat inserts](https://www.cnckitchen.com/shop#!/Gewindeeinsatz-threaded-insert-M2-5-Standard-100-Stk-pcs/p/431146818/category=0). Alternatively, you can bring your own enclosure and glue/attach it to an empty bottom side.
 
 *Download the files under [`stl`](/stl/) to slice the files for your printer and filament.* These are generally easy files to print. The default print settings should work and supports are not required.
 
@@ -221,7 +221,6 @@ Use the `Makefile` to build the project with `make cubo`.
 
 ## Reporting issues and Feedback
 
-If you run into any issues or have any feedback, please [open a ticket](https://github.com/zugaldia/cubo/issues) and tag me (@zugaldia).
+If you run into any issues or have any feedback, please [open a ticket](https://github.com/zugaldia/cubo/issues) and tag me (`@zugaldia`).
 
 Happy hacking.
-
