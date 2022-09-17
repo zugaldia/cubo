@@ -17,7 +17,7 @@ Because every project is different, Cubo provides a variety of building blocks t
 - Extendable to custom boards, with support for NVIDIA Jetson Nano and Google Coral Dev Board being next on the list.
 - All sides have the same dimensions and holes positions to make them interchangeable. You can choose the sides that work best for your project, replace them as the project evolves, or swap them between projects.
 - Sides are connected with screws for durability. You can choose between two versions: one with heat inserts, and one with good old screw nuts.
-- Sides are 16x16cm which are big enough to host most dev boards and small enough to fit most 3D printers.
+- Sides are 19x19cm which are big enough to host most dev boards comfortably and small enough to fit most 3D printers.
 - Easy to print with default settings and no supports. STLs are provided here and on Printables. There are also ready-to-print sliced versions that work with Prusa i3 MK3S+ with PETG filament.
 
 ## Getting started
