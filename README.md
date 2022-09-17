@@ -10,14 +10,14 @@ Cubo is an extensible enclosure for Raspberry Pi and Arduino projects.
 
 Because every project is different, Cubo provides a variety of building blocks to pick from during prototyping. The end result is a sturdy cube-shaped box that hosts, organizes, and protects the electronics of a project.
 
-[OpenSCAD](https://openscad.org/) source code is available, customizations and contributions to the project are welcome.
+[OpenSCAD](https://openscad.org/) source code is available, and customizations and contributions to the project are welcome.
 
 ## Main features
 - Supports **Arduino** (Leonardo, Nano, Uno R3) and **Raspberry Pi** (3, 4, Pico, Zero) out-of-the-box.
 - Extendable to **custom boards**, with support for NVIDIA Jetson Nano and Google Coral Dev Board being next on the list.
-- All sides have the same dimensions and holes positions to make them **interchangeable**. You can choose the sides that work best for your project, replace them as the project evolves, or swap them between projects.
+- All sides have the same dimensions and hole positions to make them **interchangeable**. You can choose the sides that work best for your project, replace them as the project evolves, or swap them between projects.
 - Sides are connected with screws for **durability**. You can choose between two versions: one with heat inserts, and one with good old screw nuts.
-- Sides are 19x19cm which are big enough to host most dev boards **with ample space**, including wiring, and small enough to fit most 3D printers.
+- The sides are 19x19cm which is big enough to host most dev boards **with ample space**, including wiring, and small enough to fit most 3D printers.
 - **Easy to print** with default settings and no supports. STLs are provided here and on Printables. There are also ready-to-print sliced versions that work with Prusa i3 MK3S+ with PETG filament.
 
 ## Getting started
