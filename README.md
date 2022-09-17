@@ -119,47 +119,47 @@ These sides are useful to let some airflow but also to attach components. The ar
 
 #### Flatiron
 
-- [`cubo_grid_flatiron_normal.stl`](/stl/cubo_grid_flatiron_normal.stl)
+- [`cubo_grid_flatiron_medium.stl`](/stl/cubo_grid_flatiron_medium.stl)
 - [`cubo_grid_flatiron_small.stl`](/stl/cubo_grid_flatiron_small.stl)
 
 Lots of squares in a beautiful grid:
 
 Flatiron | Flatiron small
 :---: | :---:
-![](png/cubo_grid_flatiron_normal.png) | ![](png/cubo_grid_flatiron_small.png)
+![](png/cubo_grid_flatiron_medium.png) | ![](png/cubo_grid_flatiron_small.png)
 
 #### Gruyere
 
-- [`cubo_grid_gruyere_normal.stl`](/stl/cubo_grid_gruyere_normal.stl)
+- [`cubo_grid_gruyere_medium.stl`](/stl/cubo_grid_gruyere_medium.stl)
 - [`cubo_grid_gruyere_small.stl`](/stl/cubo_grid_gruyere_small.stl)
 
 A delicious variant of the flatiron grid:
 
 Gruyere | Gruyere small
 :---: | :---:
-![](png/cubo_grid_gruyere_normal.png) | ![](png/cubo_grid_gruyere_small.png)
+![](png/cubo_grid_gruyere_medium.png) | ![](png/cubo_grid_gruyere_small.png)
 
 #### Longitude
 
-- [`cubo_grid_longitude_normal.stl`](/stl/cubo_grid_longitude_normal.stl)
+- [`cubo_grid_longitude_medium.stl`](/stl/cubo_grid_longitude_medium.stl)
 - [`cubo_grid_longitude_small.stl`](/stl/cubo_grid_longitude_small.stl)
 
 I could also have called it the Jeep grid:
 
 Longitude | Longitude small
 :---: | :---:
-![](png/cubo_grid_longitude_normal.png) | ![](png/cubo_grid_longitude_small.png)
+![](png/cubo_grid_longitude_medium.png) | ![](png/cubo_grid_longitude_small.png)
 
 #### Latitude
 
-- [`cubo_grid_latitude_normal.stl`](/stl/cubo_grid_latitude_normal.stl)
+- [`cubo_grid_latitude_medium.stl`](/stl/cubo_grid_latitude_medium.stl)
 - [`cubo_grid_latitude_small.stl`](/stl/cubo_grid_latitude_small.stl)
 
 We couldn't have Longitude without Latitude:
 
 Latitude | Latitude small
 :---: | :---:
-![](png/cubo_grid_latitude_normal.png) | ![](png/cubo_grid_latitude_small.png)
+![](png/cubo_grid_latitude_medium.png) | ![](png/cubo_grid_latitude_small.png)
 
 ## Utils
 
