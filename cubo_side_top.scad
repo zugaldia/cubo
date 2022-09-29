@@ -56,13 +56,11 @@ cubo_top_empty(with_insert = true)
 }
 
 cubo_connector = "insert"; // insert, nut
-cubo_fill = "empty";       // filled, empty
-
+cubo_fill = "";       // filled, empty
 with_insert = cubo_connector == "insert" ? true : false;
-is_empty = cubo_fill == "empty" ? true : false;
 
-if (is_empty) {
+if (cubo_fill == "empty") {
     cubo_top_empty(with_insert = with_insert);
-} else {
+} else if (cubo_fill == "filled") {
     cubo_top(with_insert = with_insert);
 }
