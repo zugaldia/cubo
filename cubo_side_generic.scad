@@ -101,4 +101,4 @@ cubo_side_with_screw_holes(text = "cubo")
     }
 }
 
-//cubo_side_with_screw_holes();
+cubo_side_with_screw_holes();
