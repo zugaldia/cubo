@@ -22,6 +22,12 @@ insert_depth = 7; // min is 6.7
 joint_thickness = insert_depth + 1;
 
 function
+get_insert_diameter() = insert_diameter;
+
+function
+get_insert_depth() = insert_depth;
+
+function
 get_joint_height() = joint_height;
 
 function
