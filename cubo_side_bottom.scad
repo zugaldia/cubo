@@ -16,7 +16,7 @@ cubo_bottom(cube_pcb = RPI4, with_insert = true)
         cubo_side_with_connectors(text = "launchpad",
                                   with_insert = with_insert);
 
-        #translate([ 0, 0, side_thickness]) pcb_holder(cube_pcb = cube_pcb);
+        translate([ 0, 0, side_thickness]) pcb_holder(cube_pcb = cube_pcb);
     }
 }
 
