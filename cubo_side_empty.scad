@@ -12,8 +12,7 @@ cubo_side_empty(text = "nada")
             [
                 side_length - frame_length,
                 side_length - frame_length,
-                side_thickness +
-                delta
+                side_thickness + delta
             ],
             center = true);
     }
