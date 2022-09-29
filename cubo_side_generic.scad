@@ -62,7 +62,7 @@ cubo_side_with_label(text = "generic side")
 // finally, add the screw holes
 joint_thickness = get_joint_thickness();
 
-screw_x = (side_length / 2) - side_thickness - joint_thickness -
+screw_x = (side_length / 2) - side_thickness - get_joint_thickness() -
           (get_joint_width() / 2);
 screw_y = (side_length / 2) - (get_joint_height() / 2) - side_thickness;
 screw_z = delta;
@@ -101,4 +101,4 @@ cubo_side_with_screw_holes(text = "cubo")
     }
 }
 
-cubo_side_with_screw_holes();
+//cubo_side_with_screw_holes();
