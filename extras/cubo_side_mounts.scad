@@ -1,8 +1,8 @@
 // A generic side to mount a bunch of different
 // adafruit panel mounts
 
-include<cubo_common.scad>
-use <cubo_side_generic.scad>
+include<../cubo_common.scad>
+use <../cubo_side_generic.scad>
 
 // a few round panel mounts use a 21.70 diameter
 // dc power: https://www.adafruit.com/product/5607
