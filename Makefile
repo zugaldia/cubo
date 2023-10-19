@@ -1,5 +1,5 @@
-OPENSCAD=/home/antonio/code/tools/openscad/OpenSCAD-2021.01-x86_64.AppImage
-SLICER=/home/antonio/code/tools/prusa/PrusaSlicer-2.5.0+linux-x64-GTK3-202209060725.AppImage
+OPENSCAD=/usr/bin/openscad-nightly
+SLICER=/home/antonio/code/tools/prusa/PrusaSlicer-2.6.1+linux-x64-GTK3-202309060711.AppImage
 OUTPUT_STL=stl
 OUTPUT_IMAGES=png
 OUTPUT_GCODE=gcode

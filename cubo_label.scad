@@ -1,7 +1,7 @@
 module
 cubo_label(text = "cubo", text_size = 10)
 {
-    color("#E95420") linear_extrude(1)
+    linear_extrude(1)
         text(text,
              size = text_size,
              font = "Ubuntu Condensed",
@@ -9,4 +9,5 @@ cubo_label(text = "cubo", text_size = 10)
              valign = "center");
 }
 
+color("#E95420")
 cubo_label("This is a test.");
