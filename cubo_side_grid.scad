@@ -37,6 +37,7 @@ cubo_grid_gruyere(small = false)
     // this makes sure that the grid has the same length both
     // vertically and horizontally
     grid_gap = (grid_length - grid_count * grid_hole) / (grid_count - 1);
+    echo("gruyere grid_gap =", grid_gap);
 
     shift = -(grid_hole + grid_gap) * floor(grid_count / 2);
     translate([ shift, shift, 0 ]) union()
@@ -117,7 +118,7 @@ cubo_side_gruyere(small = false)
 }
 
 grid_name = "gruyere";
-grid_size = "medium"; // small, medium
+grid_size = "small"; // small, medium
 is_small = grid_size == "small" ? true : false;
 
 if (grid_name == "flatiron") {

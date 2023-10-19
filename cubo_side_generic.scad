@@ -9,6 +9,8 @@ use <BOSL/shapes.scad>
 include <cubo_common.scad>
 use <cubo_joints.scad>
 use <cubo_label.scad>
+include <NopSCADlib/vitamins/pcbs.scad>
+use <cubo_pcbs.scad>
 
 module
 cubo_side()
@@ -102,3 +104,6 @@ cubo_side_with_screw_holes(text = "cubo")
 }
 
 cubo_side_with_screw_holes();
+
+translate([ 0, 0, side_thickness]) 
+pcb_holder(cube_pcb = RPI3);

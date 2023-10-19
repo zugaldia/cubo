@@ -3,6 +3,7 @@
 
 include<../cubo_common.scad>
 use <../cubo_side_generic.scad>
+use <../cubo_label.scad>
 
 // a few round panel mounts use a 21.70 diameter
 // dc power: https://www.adafruit.com/product/5607
@@ -105,55 +106,76 @@ module adafruit_mount_ethernet_909() {
 module cubo_side_mounts() {
     spacing = 55;
     
-    difference() {
-        cubo_side_with_screw_holes("plug&play");
+    union() {
+        // Labels        
+        translate([-1.2*spacing,spacing/2,side_thickness])
+        cubo_label(text = "usb a", text_size = 8);
         
-        // Top row (arcade buttons)
+        translate([1.2*spacing,spacing/2,side_thickness])
+        cubo_label(text = "usb a", text_size = 8);
         
-        translate([0,spacing,side_thickness/2])
-        cubo_round_mount(hole_diameter = 28);
+        translate([-1.2*spacing,-spacing/2,side_thickness])
+        cubo_label(text = "micro usb", text_size = 8);
         
-        translate([spacing,spacing,side_thickness/2])
-        cubo_round_mount(hole_diameter = 28);
+        translate([1.2*spacing,-spacing/2,side_thickness])
+        cubo_label(text = "ethernet", text_size = 8);
         
-        translate([-spacing,spacing,side_thickness/2])
-        cubo_round_mount(hole_diameter = 28);
-        
-        // Middle row
-        
-        translate([0,0,side_thickness/2])
-        cubo_round_mount(hole_diameter = 24.7);
-        
-        translate([spacing,0,side_thickness/2])
-        cubo_round_mount(hole_diameter = 24.7);
-        
-        translate([-spacing,0,side_thickness/2])
-        cubo_round_mount(hole_diameter = 24.7);
-        
-        // Lower row
+        difference() {
+            cubo_side_with_screw_holes("plug&play");
+            
+            // Top row (arcade buttons)
+            // We need four because adafruit_arcade_5296 supports them
+            // The factor helps increase the space between the holes
+            factor = 1.2;
+            
+            translate([factor*spacing/3,spacing,side_thickness/2])
+            cubo_round_mount(hole_diameter = 28);
+            
+            translate([-factor*spacing/3,spacing,side_thickness/2])
+            cubo_round_mount(hole_diameter = 28);
+            
+            translate([-factor*spacing,spacing,side_thickness/2])
+            cubo_round_mount(hole_diameter = 28);
+            
+            translate([factor*spacing,spacing,side_thickness/2])
+            cubo_round_mount(hole_diameter = 28);
+                    
+            // Middle row
+            
+            translate([0,0,side_thickness/2])
+            cubo_round_mount(hole_diameter = 24.7);
+            
+            translate([spacing,0,side_thickness/2])
+            cubo_round_mount(hole_diameter = 24.7);
+            
+            translate([-spacing,0,side_thickness/2])
+            cubo_round_mount(hole_diameter = 24.7);
+                    
+            // Lower row
 
-        translate([0,-spacing,side_thickness/2])
-        cubo_round_mount(hole_diameter = 21.7);
-        
-        translate([spacing,-spacing,side_thickness/2])
-        cubo_round_mount(hole_diameter = 21.7);
-        
-        translate([-spacing,-spacing,side_thickness/2])
-        cubo_round_mount(hole_diameter = 21.7);
-        
-        // Extras
-        
-        translate([-spacing/2,spacing/2,side_thickness/2])
-        adafruit_mount_usb_908();
+            translate([0,-spacing,side_thickness/2])
+            cubo_round_mount(hole_diameter = 21.7);
+            
+            translate([spacing,-spacing,side_thickness/2])
+            cubo_round_mount(hole_diameter = 21.7);
+            
+            translate([-spacing,-spacing,side_thickness/2])
+            cubo_round_mount(hole_diameter = 21.7);
+            
+            // Extras
+            
+            translate([-spacing/2,spacing/2,side_thickness/2])
+            adafruit_mount_usb_908();
 
-        translate([spacing/2,spacing/2,side_thickness/2])
-        adafruit_mount_usb_908();
+            translate([spacing/2,spacing/2,side_thickness/2])
+            adafruit_mount_usb_908();
 
-        translate([-spacing/2,-spacing/2,side_thickness/2])
-        adafruit_mount_microusb_3258();
-                
-        translate([spacing/2,-spacing/2,side_thickness/2])
-        adafruit_mount_ethernet_909();
+            translate([-spacing/2,-spacing/2,side_thickness/2])
+            adafruit_mount_microusb_3258();
+                    
+            translate([spacing/2,-spacing/2,side_thickness/2])
+            adafruit_mount_ethernet_909();
+        }
     }
 }
 

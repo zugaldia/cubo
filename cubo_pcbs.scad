@@ -11,6 +11,8 @@ pcb_holder_height = side_thickness;
 pcb_insert_height = target_height-pcb_holder_height;
 pcb_extra = 5;
 
+echo("pcb_insert_height",pcb_insert_height); // 12
+
 // minimum recommended values for CNC kitchen 2.5 inserts
 insert_height = 5;
 insert_radius_internal = 2;
@@ -40,6 +42,35 @@ pcb_insert(calibrate=false)
 }
 
 //pcb_insert();
+
+module
+pcb_side_insert(calibrate=false)
+{
+    union() {
+        difference()
+        {
+            union() {
+                cylinder(
+                    h = side_thickness, r = M2p5_clearance_radius+1, center = true);
+                    
+                translate([M2p5_clearance_radius*2,0,0])
+                cube([M2p5_clearance_radius*4,2*(M2p5_clearance_radius+1),side_thickness], center=true);
+            }
+
+            cylinder(
+                h = side_thickness*2, r = M2p5_clearance_radius, center = true);
+        }
+        
+        // Helps building custom PCB holders
+        if (calibrate) {
+            color("black")
+            translate([ 0, 0, ((pcb_insert_height-insert_height)) + delta ]) cylinder(
+                h = 2*insert_height, r = 0.5*insert_radius_internal, center = true);
+        }
+    }
+}
+
+pcb_side_insert();
 
 module
 pcb_holder(cube_pcb = RPI4)
@@ -81,6 +112,22 @@ pcb_holder_custom(dimensions=[], holes=[], calibrate=false, inserts_only=false)
    }
 }
 
-dimensions = [75,50,10];
-sample_holes = [ [pcb_extra,pcb_extra] ];
-pcb_holder_custom(dimensions=dimensions, holes=sample_holes,calibrate=true);
+module
+pcb_side_holder_custom(dimensions=[], holes=[], calibrate=false)
+{
+    for($i = [0 : 1 : len(holes) - 1]) {
+        hole = holes[$i];
+        translate([hole[0]-(dimensions[0]/2), hole[1]-(dimensions[1]/2), pcb_holder_height])
+        if ($i == 0 || $i == 1) {
+            rotate([0,0,90])
+            pcb_side_insert(calibrate=calibrate);
+        } else {
+            rotate([0,0,270])
+            pcb_side_insert(calibrate=calibrate);
+        }
+   }
+}
+
+//dimensions = [75,50,10];
+//sample_holes = [ [pcb_extra,pcb_extra] ];
+//pcb_holder_custom(dimensions=dimensions, holes=sample_holes,calibrate=true);

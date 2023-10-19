@@ -85,3 +85,39 @@ module adafruit_412_solenoid() {
 }
 
 //adafruit_412_solenoid();
+
+module adafruit_arcade_5296() {
+    dimensions=[76.3,21.5,13.0];
+    holes=[
+        [18.95,2.33],
+        [18.95,19.16],
+        [57.10,2.33],
+        [57.10,19.16]
+    ];
+    pcb_holder_custom(
+        dimensions=dimensions, holes=holes,
+        calibrate=false, inserts_only=false);
+    
+    plate_gap = 50;
+    screw_gap = (dimensions[0]+plate_gap)/2-(plate_gap/4);
+    
+    difference() {
+        translate([0,0,side_thickness/2])
+        cube([dimensions[0]+plate_gap,
+            dimensions[1], side_thickness], center=true);
+        
+        translate([screw_gap,0,side_thickness/2])
+        hull() nut(default_nut);
+        
+        translate([screw_gap,0,7])
+        screw(default_screw, 10);
+        
+        translate([-screw_gap,0,side_thickness/2])
+        hull() nut(default_nut);
+        
+        translate([-screw_gap,0,7])
+        screw(default_screw, 10);
+    }
+}
+
+adafruit_arcade_5296();
